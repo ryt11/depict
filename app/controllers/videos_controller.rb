@@ -4,8 +4,15 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = Video.new(video_params)
-    
+    @video = current_user.videos.new(video_params)
+
+    if @video.save
+      flash[:success] = "Depicted!"
+      redirect_to user_path(current_user)
+    else
+      flash.now[:failure] = "Depiction failed, try again."
+      render :new
+    end
   end
 
   private
