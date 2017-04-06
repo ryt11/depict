@@ -42,6 +42,7 @@ input:focus {
   text-align: center;
 }
 
+
 .flash-failure {
   text-align: center;
   border-radius: 5px;
@@ -63,7 +64,6 @@ nav * {
 .depict-btn {
    animation: rainbow-background 10s infinite;
 }
-
 
 input[type=submit]{
     font-family: 'Bungee Hairline';

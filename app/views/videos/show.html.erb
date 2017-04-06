@@ -1,0 +1,5 @@
+<h1><%="#{current_user.username}'s Videos"%></h1>
+
+<% current_user.videos.each do |video| %>
+  <h3><%=video.audio_file%></h3>
+<%end%>
