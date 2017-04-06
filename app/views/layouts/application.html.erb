@@ -3,15 +3,32 @@
   <head>
     <title>Depict</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag "styles" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
   </head>
-  <% flash.each do |type, msg| %>
-    <%= content_tag :div, msg, class: "flash-#{type}" %>
-  <%end%>
-
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-inverse nav-format">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Depict</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Your Profile</a></li>
+      <li><a href="#">Top Depictions</a></li>
+      <li><a href="#">Tag Search</a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "flash-#{type}" %>
+      <%end%>
+      <div class="jumbotron">
+            <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

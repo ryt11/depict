@@ -1,0 +1,78 @@
+@keyframes rainbow-background {
+         0%     { background-color: #ff0000; }
+     8.333%     { background-color: #ff8000; }
+    16.667%     { background-color: #ffff00; }
+    25.000%     { background-color: #80ff00; }
+    33.333%     { background-color: #00ff00; }
+    41.667%     { background-color: #00ff80; }
+    50.000%     { background-color: #00ffff; }
+    58.333%     { background-color: #0080ff; }
+    66.667%     { background-color: #00ff19; }
+    75.000%     { background-color: #8000ff; }
+    83.333%     { background-color: #ff00ff; }
+    91.667%     { background-color: #ff0080; }
+    100.00%     { background-color: #ff0000; }
+}
+
+body {
+  background-color: aquamarine  !important;
+}
+.jumbotron {
+    background-color: #222222 !important;
+}
+
+.form {
+  text-align: center;
+}
+
+.form-spacing {
+  margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none !important;
+    border:2px solid aquamarine;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+::placeholder {
+  font-family: 'Bungee Hairline';
+  font-weight: bold;
+  color: dimgray;
+  text-align: center;
+}
+
+.flash-failure {
+  text-align: center;
+  border-radius: 5px;
+  background-color: #d9534f;
+  font-family: 'Bungee Hairline';
+  font-weight: bold;
+}
+
+nav * {
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.nav-format {
+  font-family: 'Bungee Hairline';
+  font-size: 20px;
+}
+
+.depict-btn {
+   animation: rainbow-background 10s infinite;
+}
+
+
+input[type=submit]{
+    font-family: 'Bungee Hairline';
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input {
+  border-radius: 20px;
+  padding: 5px;
+}
