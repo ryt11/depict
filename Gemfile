@@ -22,6 +22,12 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'bcrypt'
 
+#mp3 metadata
+gem 'ruby-mp3info', :require => 'mp3info'
+
+#audio file upload
+gem "paperclip", "~> 5.0.0"
+
 gem 'rspec-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
