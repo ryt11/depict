@@ -1,5 +1,5 @@
-<%= form_for @video do |f| %>
-  <%= f.label :audio_file %>
-  <%= f.text_field :audio_file%>
+
+<%= form_for @video, html: { multipart: true } do |f| %>
+  <%= f.file_field :audio %>
   <%= f.submit "Depict" %>
-<%end%>
+<% end %>

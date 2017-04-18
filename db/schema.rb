@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405215817) do
+ActiveRecord::Schema.define(version: 20170418223857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,9 +38,13 @@ ActiveRecord::Schema.define(version: 20170405215817) do
     t.integer  "user_id"
     t.string   "video_file"
     t.string   "audio_file"
-    t.integer  "likes",      default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "likes",              default: 0
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
     t.index ["user_id"], name: "index_videos_on_user_id", using: :btree
   end
 
