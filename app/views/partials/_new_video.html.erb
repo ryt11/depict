@@ -1,0 +1,5 @@
+
+<%= form_for @video, html: { multipart: true } do |f| %>
+  <%= f.file_field :audio, class: "depict-btn" %>
+  <%= f.submit "Depict", class: "depict-btn" %>
+<% end %>

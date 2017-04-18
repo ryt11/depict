@@ -4,7 +4,8 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = current_user.videos.new(video_params)
+    @video = current_user.videos.new(audio: params[:video][:audio])
+    
     if @video.save
       flash[:success] = "Depicted!"
       redirect_to user_path(current_user)
@@ -13,11 +14,11 @@ class VideosController < ApplicationController
       render :new
     end
   end
-
-  private
-
-  def video_params
-    params.require(:video).permit(:audio_file)
-  end
+  #
+  # private
+  #
+  #
+  #  def video_params
+  #   params.require(:video).permit(:audio)
+  # end
 end
- 
