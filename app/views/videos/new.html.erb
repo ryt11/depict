@@ -1,1 +1,17 @@
-<%=render 'partials/new_video'%>
+<p>You will need to provide your own raw mp3 file. Most file types are supported. </p>
+
+<p> Don't have a file on hand? <%= link_to "Peggo", 'http://peggo.tv/'%> is a great tool to convert your favorite YouTube video into audio.</p>
+
+<p> Enter your youtube URL below to be redirected to Peggo <p>
+
+
+  <%=form_for :peggo_redirect, url: '/youtube_redirect' do |f| %>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 form-spacing">
+    <%= f.text_field :youtube_url, placeholder: "YouTube URL" %>
+    <%= f.submit "Go to Peggo", class: 'depict-btn' %>
+      </div>
+  <%end%>
+    </div>
+
+        <%=render 'partials/new_video'%>
